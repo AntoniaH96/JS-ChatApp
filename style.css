@@ -1,0 +1,129 @@
+body {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 500px;
+    height: 100vh;
+    background-image: url(./Background/Background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  * {
+    box-sizing: inherit;
+  }
+
+
+  .members-count {
+    text-align: center;
+    font-weight: bold;
+    border: 3px solid #4f7ec0;
+    background-color: rgba(86, 168, 240, 0.8);
+    width: 80%;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-bottom: 5px;
+  } 
+
+  .members-list {
+    text-align: center;
+    font-weight: bold;
+    border: 3px solid #4f7ec0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 80%;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .messages {
+    border: 3px solid #4f7ec0;
+    height: 50vh;
+    flex-shrink: 1;
+    overflow: auto;
+    text-align: left;
+    background-color: rgba(249, 208, 160, 0.6);
+    border-radius: 10%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .message {
+    padding: 5px 20px;
+    font-size: 14px;
+    color: rgb(255, 232, 232);
+  }
+
+  .message--mine {
+    text-align: right;
+    background-color: rgb(66, 154, 131, 0.7);
+    color: white;
+    width: max-content;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    border-radius: 20px;
+    padding: 5px 20px;
+    white-space: nowrap;
+    }
+    
+    .message--theirs {
+      text-align: left;
+      background-color: rgba(43, 90, 151, 0.7);
+      width: max-content;
+      border-radius: 20px;
+      margin: 5px;
+      color: white;
+    }
+
+  .member-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+  .message .member {
+    display: inline-block;
+  }
+
+  .member {
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .message-form {
+    border: 3px solid #4f7ec0;
+    display: flex;
+    border-radius: 20px;
+    flex-shrink: 0;
+  }
+
+  .message-form__input {
+    flex-grow: 1;
+    border: 1px solid #ffffff;
+    border-radius: 18px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  
+  .message-form__button {
+    border: 3px solid #4f7ec0;
+    border-radius: 20px;
+    margin: 10px;
+    font-size: medium;
+  }
+  
+  .message-form__button:active {
+    background-color: #4f7ec0; 
+    border-radius: 20px;
+    color: white;
+    font-size: medium;
+
+  }
+
