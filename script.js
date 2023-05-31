@@ -1,9 +1,8 @@
-// PS! Replace this with your own channel ID
-// If you use this channel ID your app will stop working in the future
+
 const CLIENT_ID = 'YTfhmnRhTCJrYCJZ';
 
 const drone = new ScaleDrone(CLIENT_ID, {
-  data: { // Will be sent out as clientData via events
+  data: { 
     name: getRandomName(),
     color: getRandomColor(),
   },
@@ -72,7 +71,7 @@ function getRandomColor() {
   return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
 
-//------------- DOM STUFF
+//------------- DOM 
 
 const DOM = {
   membersCount: document.querySelector('.members-count'),
@@ -115,12 +114,12 @@ function updateMembersDOM() {
 
 function createMessageElement(text, member) {
     const { name, color } = member.clientData;
-    const isMine = member.id === drone.clientId; // Check if the message is yours
+    const isMine = member.id === drone.clientId; 
     const el = document.createElement('div');
     el.appendChild(createMemberElement(member));
     el.appendChild(document.createTextNode(text));
     el.className = 'message';
-    el.classList.add(isMine ? 'message--mine' : 'message--theirs'); // Add appropriate class based on message ownership
+    el.classList.add(isMine ? 'message--mine' : 'message--theirs'); 
     return el;
   }
 
